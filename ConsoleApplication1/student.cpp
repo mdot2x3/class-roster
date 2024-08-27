@@ -4,6 +4,19 @@
 
 using namespace std;
 
+// constructor implementation
+Student::Student(string sid, string fn, string ln, string e, int a, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram dp) {
+	studentId = sid;
+	firstName = fn;
+	lastName = ln;
+	emailAddress = e;
+	age = a;
+	daysToCompleteCourse[0] = daysInCourse1;
+	daysToCompleteCourse[1] = daysInCourse2;
+	daysToCompleteCourse[2] = daysInCourse3;
+	degreeProgram = dp;
+}
+
 string Student::getStudentId() {
 	return studentId;
 }

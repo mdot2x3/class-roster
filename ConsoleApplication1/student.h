@@ -15,6 +15,12 @@ private:
 	DegreeProgram degreeProgram;
 
 public:
+	// default constructor
+	Student() = default;
+
+	// parameterized constructor
+	Student(string sid, string fn, string ln, string e, int a, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram dp);
+
 	string getStudentId();
 	string getFirstName();
 	string getLastName();

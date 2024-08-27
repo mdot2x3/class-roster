@@ -2,8 +2,8 @@
 #include <string>
 #include "roster.h"
 
-////for testing student function
-#include "student.h"
+////for student function test1 (default constructor)
+//#include "student.h"
 
 using namespace std;
 
@@ -18,10 +18,9 @@ int main()
     cout << "Student ID: 011092415" << endl;
     cout << "Name: Max S" << endl;
 
-    
 
-
-    ////for testing student function
+    /*
+    ////for student function test1 (default constructor)
     Student student;
     
     student.setStudentId("B1");
@@ -43,6 +42,16 @@ int main()
     cout << student.getDegreeProgram() << endl;
 
     student.print();
+    */
+
+
+    /*
+    ////for student function test2 (parameterized constructor)
+    Student* S = new Student("A1", "John", "Smith", "j@j.com", 20, 30, 35, 40, DegreeProgram::SECURITY);
+    S->print();
+    delete S;
+    */
+
 
     return 0;
 
