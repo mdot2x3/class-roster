@@ -1,7 +1,7 @@
 #pragma once
 #include "degree.h"
 
-// massive number of errors occured when not included
+// required to prevent errors
 using namespace std;
 
 class Student {

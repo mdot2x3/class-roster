@@ -48,7 +48,17 @@ void Student::setDegreeProgram(DegreeProgram dp) {
 	degreeProgram = dp;
 }
 
+// converts enum value to string
+string degreeProgramToString(DegreeProgram dp) {
+	switch (dp) {
+		case SECURITY: return "SECURITY";
+		case NETWORK: return "NETWORK";
+		case SOFTWARE: return "SOFTWARE";
+		default: return "N/A";
+	}
+}
+
 void Student::print() {
 	cout << studentId << "\t" << firstName << "\t" << lastName << "\t" << emailAddress << "\t" << age << "\t" <<
-		"{" << daysToCompleteCourse[0] << "," << daysToCompleteCourse[1] << "," << daysToCompleteCourse[2] << "}" << "\t" << degreeProgram << "\t" << endl;
+		"{" << daysToCompleteCourse[0] << "," << daysToCompleteCourse[1] << "," << daysToCompleteCourse[2] << "}" << "\t" << degreeProgramToString(degreeProgram) << "\t" << endl;
 }

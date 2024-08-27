@@ -2,8 +2,8 @@
 #include <string>
 #include "roster.h"
 
-////for testing student.h,student.cpp,degree.h
-//#include "student.h"
+////for testing student function
+#include "student.h"
 
 using namespace std;
 
@@ -21,8 +21,8 @@ int main()
     
 
 
-    ////for testing student.h,student.cpp,degree.h
-    /*Student student;
+    ////for testing student function
+    Student student;
     
     student.setStudentId("B1");
     student.setFirstName("Peter");
@@ -44,6 +44,6 @@ int main()
 
     student.print();
 
-    return 0;*/
+    return 0;
 
 }
