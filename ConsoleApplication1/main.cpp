@@ -2,6 +2,9 @@
 #include <string>
 #include "roster.h"
 
+////for testing student.h,student.cpp,degree.h
+//#include "student.h"
+
 using namespace std;
 
 int main()
@@ -15,5 +18,32 @@ int main()
     cout << "Student ID: 011092415" << endl;
     cout << "Name: Max S" << endl;
 
+    
+
+
+    ////for testing student.h,student.cpp,degree.h
+    /*Student student;
+    
+    student.setStudentId("B1");
+    student.setFirstName("Peter");
+    student.setLastName("Parker");
+    student.setEmailAddress("email@email.com");
+    student.setAge(18);
+    student.setDaysToCompleteCourse(0, 1);
+    student.setDaysToCompleteCourse(1, 2);
+    student.setDaysToCompleteCourse(2, 3);
+    student.setDegreeProgram(SECURITY);
+
+    cout << student.getStudentId() << endl;
+    cout << student.getFirstName() << endl;
+    cout << student.getLastName() << endl;
+    cout << student.getEmailAddress() << endl;
+    cout << student.getAge() << endl;
+    cout << student.getDaysToCompleteCourse(1) << endl;
+    cout << student.getDegreeProgram() << endl;
+
+    student.print();
+
+    return 0;*/
 
 }
