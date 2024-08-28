@@ -6,7 +6,7 @@ using namespace std;
 
 class Student {
 private:
-	string studentId;
+	string studentID;
 	string firstName;
 	string lastName;
 	string emailAddress;
@@ -19,9 +19,12 @@ public:
 	Student() = default;
 
 	// parameterized constructor
-	Student(string sid, string fn, string ln, string e, int a, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram dp);
+	Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram);
 
-	string getStudentId();
+	// destructor
+	~Student();
+
+	string getstudentID();
 	string getFirstName();
 	string getLastName();
 	string getEmailAddress();
@@ -29,7 +32,7 @@ public:
 	int getDaysToCompleteCourse(int);
 	DegreeProgram getDegreeProgram();
 
-	void setStudentId(string);
+	void setstudentID(string);
 	void setFirstName(string);
 	void setLastName(string);
 	void setEmailAddress(string);

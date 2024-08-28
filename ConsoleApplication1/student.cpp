@@ -5,20 +5,25 @@
 using namespace std;
 
 // constructor implementation
-Student::Student(string sid, string fn, string ln, string e, int a, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram dp) {
-	studentId = sid;
-	firstName = fn;
-	lastName = ln;
-	emailAddress = e;
-	age = a;
+Student::Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram) {
+	this->studentID = studentID;
+	this->firstName = firstName;
+	this->lastName = lastName;
+	this->emailAddress = emailAddress;
+	this->age = age;
 	daysToCompleteCourse[0] = daysInCourse1;
 	daysToCompleteCourse[1] = daysInCourse2;
 	daysToCompleteCourse[2] = daysInCourse3;
-	degreeProgram = dp;
+	this->degreeProgram = degreeProgram;
 }
 
-string Student::getStudentId() {
-	return studentId;
+// destructor
+Student::~Student() {
+
+}
+
+string Student::getstudentID() {
+	return studentID;
 }
 string Student::getFirstName() {
 	return firstName;
@@ -39,31 +44,31 @@ DegreeProgram Student::getDegreeProgram() {
 	return degreeProgram;
 }
 
-void Student::setStudentId(string sid) {
-	studentId = sid;
+void Student::setstudentID(string studentID) {
+	this->studentID = studentID;
 }
-void Student::setFirstName(string fn) {
-	firstName = fn;
+void Student::setFirstName(string firstName) {
+	this->firstName = firstName;
 }
-void Student::setLastName(string ln) {
-	lastName = ln;
+void Student::setLastName(string lastName) {
+	this->lastName = lastName;
 }
-void Student::setEmailAddress(string e) {
-	emailAddress = e;
+void Student::setEmailAddress(string emailAddress) {
+	this->emailAddress = emailAddress;
 }
-void Student::setAge(int a) {
-	age = a;
+void Student::setAge(int age) {
+	this->age = age;
 }
 void Student::setDaysToCompleteCourse(int arrayPosition, int value) {
 	daysToCompleteCourse[arrayPosition] = value;
 }
-void Student::setDegreeProgram(DegreeProgram dp) {
-	degreeProgram = dp;
+void Student::setDegreeProgram(DegreeProgram degreeProgram) {
+	this->degreeProgram = degreeProgram;
 }
 
 // converts enum value to string
-string degreeProgramToString(DegreeProgram dp) {
-	switch (dp) {
+string degreeProgramToString(DegreeProgram degreeProgram) {
+	switch (degreeProgram) {
 		case SECURITY: return "SECURITY";
 		case NETWORK: return "NETWORK";
 		case SOFTWARE: return "SOFTWARE";
@@ -72,6 +77,6 @@ string degreeProgramToString(DegreeProgram dp) {
 }
 
 void Student::print() {
-	cout << studentId << "\t" << firstName << "\t" << lastName << "\t" << emailAddress << "\t" << age << "\t" <<
+	cout << studentID << "\t" << firstName << "\t" << lastName << "\t" << emailAddress << "\t" << age << "\t" <<
 		"{" << daysToCompleteCourse[0] << "," << daysToCompleteCourse[1] << "," << daysToCompleteCourse[2] << "}" << "\t" << degreeProgramToString(degreeProgram) << "\t" << endl;
 }
