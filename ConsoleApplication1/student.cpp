@@ -15,13 +15,14 @@ Student::Student(string studentID, string firstName, string lastName, string ema
 	daysToCompleteCourse[1] = daysInCourse2;
 	daysToCompleteCourse[2] = daysInCourse3;
 	this->degreeProgram = degreeProgram;
+
 }
 
 // destructor
 Student::~Student() {
-
 }
 
+// getters
 string Student::getstudentID() {
 	return studentID;
 }
@@ -44,6 +45,7 @@ DegreeProgram Student::getDegreeProgram() {
 	return degreeProgram;
 }
 
+// setters
 void Student::setstudentID(string studentID) {
 	this->studentID = studentID;
 }
@@ -66,7 +68,7 @@ void Student::setDegreeProgram(DegreeProgram degreeProgram) {
 	this->degreeProgram = degreeProgram;
 }
 
-// converts enum value to string
+// converts enum value to string for print()
 string degreeProgramToString(DegreeProgram degreeProgram) {
 	switch (degreeProgram) {
 		case SECURITY: return "SECURITY";
@@ -77,6 +79,6 @@ string degreeProgramToString(DegreeProgram degreeProgram) {
 }
 
 void Student::print() {
-	cout << studentID << "\t" << firstName << "\t" << lastName << "\t" << emailAddress << "\t" << age << "\t" <<
-		"{" << daysToCompleteCourse[0] << "," << daysToCompleteCourse[1] << "," << daysToCompleteCourse[2] << "}" << "\t" << degreeProgramToString(degreeProgram) << "\t" << endl;
+	cout << getstudentID() << "\t" << getFirstName() << "\t" << getLastName() << "\t" << getEmailAddress() << "\t" << getAge() << "\t" <<
+		"{" << getDaysToCompleteCourse(0) << "," << getDaysToCompleteCourse(1) << "," << getDaysToCompleteCourse(2) << "}" << "\t" << degreeProgramToString(getDegreeProgram()) << "\t" << endl;
 }
