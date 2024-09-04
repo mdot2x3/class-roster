@@ -79,6 +79,6 @@ string degreeProgramToString(DegreeProgram degreeProgram) {
 }
 
 void Student::print() {
-	cout << getstudentID() << "\t" << getFirstName() << "\t" << getLastName() << "\t" << getEmailAddress() << "\t" << getAge() << "\t" <<
+	cout << getstudentID() << "\t" << getFirstName() << "\t" << getLastName() << "\t" << getAge() << "\t" <<
 		"{" << getDaysToCompleteCourse(0) << "," << getDaysToCompleteCourse(1) << "," << getDaysToCompleteCourse(2) << "}" << "\t" << degreeProgramToString(getDegreeProgram()) << "\t" << endl;
 }

@@ -7,15 +7,13 @@
 
 using namespace std;
 
-// is this needed??
-//Student* parse(string);
-
 int main()
 {
     cout << "C867-Scripting & Programming: Applications" << endl;
     cout << "Language: C++" << endl;
     cout << "Student ID: 011092415" << endl;
     cout << "Name: Max S" << endl;
+    cout << endl;
 
     Roster classRoster;
 
@@ -30,7 +28,9 @@ int main()
     classRoster.printAll();
     cout << endl;
   
-
+    cout << "Displaying invalid emails:" << endl;
+    classRoster.printInvalidEmails();
+    cout << endl;
 
 
     /*

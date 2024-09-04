@@ -4,11 +4,6 @@
 
 using namespace std;
 
-// constructor implementation
-// progam didn't run with constructor here, as mentioned may not be needed
-//Roster::Roster() {
-//}
-
 // destructor
 Roster::~Roster() {
 }
@@ -63,12 +58,23 @@ void Roster::parse(string row) {
 	else if (strDegreeProgram == "SOFTWARE") {
 		degreeProgram = DegreeProgram::SOFTWARE;
 	}
-	//return new Student(studentID, firstName, lastName, emailAddress, age, daysInCourse1, daysInCourse2, daysInCourse3, degreeProgram);
 
+	// call add function with parsed data
 	add(studentID, firstName, lastName, emailAddress, age, daysInCourse1, daysInCourse2, daysInCourse3, degreeProgram);
 }
 
 void Roster::printAll() {
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < numStudents; i++) {
 		classRosterArray[i]->print();
+	}	
+}
+
+void Roster::printInvalidEmails() {
+	for (int i = 0; i < numStudents; i++) {
+		string email = (classRosterArray[i]->getEmailAddress());
+		// check if "@" is missing, "." is missing, or if there is a space
+		if (email.find("@") == string::npos || email.find(".") == string::npos || email.find(" ") != string::npos) {
+			cout << email << " - is invalid." << endl;
+		}
+	}
 }
