@@ -65,6 +65,9 @@ void Roster::parse(string row) {
 
 void Roster::printAll() {
 	for (int i = 0; i < numStudents; i++) {
+		if (classRosterArray[i]->getStudentID() == "deleted") {
+			continue;
+		}
 		classRosterArray[i]->print();
 	}	
 }
@@ -93,5 +96,19 @@ void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
 		if (degreeProgram == classRosterArray[i]->getDegreeProgram()) {
 			classRosterArray[i]->print();
 		}
+	}
+}
+
+void Roster::remove(string studentID) {
+	string idList;
+	for (int i = 0; i < numStudents; i++) {
+		string id = (classRosterArray[i]->getStudentID());
+		idList += (id + ", ");
+		if (studentID == id) {
+			classRosterArray[i]->setStudentID("deleted");
+		}
+	}
+	if (idList.find(studentID) == string::npos) {
+		cout << "The student with the ID: " << studentID << " was not found." << endl;
 	}
 }

@@ -44,6 +44,16 @@ int main()
     classRoster.printByDegreeProgram(SOFTWARE);
     cout << endl;
 
+    cout << "Removing A3:" << endl;
+    classRoster.remove("A3");
+    classRoster.printAll();
+    cout << endl;
+
+    cout << "Removing A3 again:" << endl;
+    classRoster.remove("A3");
+    cout << endl;
+
+
     /*
     ////for student function test1 (default constructor)
     Student student;
