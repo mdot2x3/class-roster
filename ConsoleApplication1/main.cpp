@@ -40,6 +40,10 @@ int main()
     }
     cout << endl;
 
+    cout << "Showing students in degree program: SOFTWARE" << endl;
+    classRoster.printByDegreeProgram(SOFTWARE);
+    cout << endl;
+
     /*
     ////for student function test1 (default constructor)
     Student student;
