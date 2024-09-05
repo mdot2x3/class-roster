@@ -6,6 +6,9 @@ const static int numStudents = 5;
 class Roster {
 
 public:
+	int index = 0;
+	Student* classRosterArray[numStudents];
+
 	// default constructor
 	Roster() = default;
 	// destructor
@@ -15,11 +18,7 @@ public:
 	void parse(string row);
 	//void remove(string studentID);
 	void printAll();
-	//void printAverageDaysInCourse(string studentID);
+	void printAverageDaysInCourse(string studentID);
 	void printInvalidEmails();
 	//void printByDegreeProgram(DegreeProgram degreeProgram)
-
-private:
-	int index = 0;
-	Student* classRosterArray[numStudents];
 };

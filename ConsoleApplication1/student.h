@@ -17,7 +17,7 @@ public:
 	~Student();
 
 	// getters
-	string getstudentID();
+	string getStudentID();
 	string getFirstName();
 	string getLastName();
 	string getEmailAddress();
@@ -26,7 +26,7 @@ public:
 	DegreeProgram getDegreeProgram();
 
 	// setters
-	void setstudentID(string);
+	void setStudentID(string);
 	void setFirstName(string);
 	void setLastName(string);
 	void setEmailAddress(string);

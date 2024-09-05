@@ -32,12 +32,19 @@ int main()
     classRoster.printInvalidEmails();
     cout << endl;
 
+    cout << "Displaying average days in course:" << endl;
+    for (int i = 0; i < numStudents; i++) {
+        string studentID = classRoster.classRosterArray[i]->getStudentID();
+        classRoster.printAverageDaysInCourse(studentID);
+        cout << endl;
+    }
+    cout << endl;
 
     /*
     ////for student function test1 (default constructor)
     Student student;
     
-    student.setstudentID("B1");
+    student.setStudentID("B1");
     student.setFirstName("Peter");
     student.setLastName("Parker");
     student.setEmailAddress("email@email.com");
@@ -47,7 +54,7 @@ int main()
     student.setDaysToCompleteCourse(2, 3);
     student.setDegreeProgram(SECURITY);
 
-    cout << student.getstudentID() << endl;
+    cout << student.getStudentID() << endl;
     cout << student.getFirstName() << endl;
     cout << student.getLastName() << endl;
     cout << student.getEmailAddress() << endl;

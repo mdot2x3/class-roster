@@ -23,7 +23,7 @@ Student::~Student() {
 }
 
 // getters
-string Student::getstudentID() {
+string Student::getStudentID() {
 	return studentID;
 }
 string Student::getFirstName() {
@@ -46,7 +46,7 @@ DegreeProgram Student::getDegreeProgram() {
 }
 
 // setters
-void Student::setstudentID(string studentID) {
+void Student::setStudentID(string studentID) {
 	this->studentID = studentID;
 }
 void Student::setFirstName(string firstName) {
@@ -79,6 +79,6 @@ string degreeProgramToString(DegreeProgram degreeProgram) {
 }
 
 void Student::print() {
-	cout << getstudentID() << "\t" << getFirstName() << "\t" << getLastName() << "\t" << getAge() << "\t" <<
+	cout << getStudentID() << "\t" << getFirstName() << "\t" << getLastName() << "\t" << getAge() << "\t" <<
 		"{" << getDaysToCompleteCourse(0) << "," << getDaysToCompleteCourse(1) << "," << getDaysToCompleteCourse(2) << "}" << "\t" << degreeProgramToString(getDegreeProgram()) << "\t" << endl;
 }
