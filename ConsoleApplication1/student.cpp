@@ -15,7 +15,6 @@ Student::Student(string studentID, string firstName, string lastName, string ema
 	daysToCompleteCourse[1] = daysInCourse2;
 	daysToCompleteCourse[2] = daysInCourse3;
 	this->degreeProgram = degreeProgram;
-
 }
 
 // destructor

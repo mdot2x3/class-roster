@@ -2,9 +2,6 @@
 #include <string>
 #include "roster.h"
 
-////for student function test1&2
-//#include "student.h"
-
 using namespace std;
 
 int main()
@@ -54,42 +51,5 @@ int main()
     cout << endl;
 
 
-    /*
-    ////for student function test1 (default constructor)
-    Student student;
-    
-    student.setStudentID("B1");
-    student.setFirstName("Peter");
-    student.setLastName("Parker");
-    student.setEmailAddress("email@email.com");
-    student.setAge(18);
-    student.setDaysToCompleteCourse(0, 1);
-    student.setDaysToCompleteCourse(1, 2);
-    student.setDaysToCompleteCourse(2, 3);
-    student.setDegreeProgram(SECURITY);
-
-    cout << student.getStudentID() << endl;
-    cout << student.getFirstName() << endl;
-    cout << student.getLastName() << endl;
-    cout << student.getEmailAddress() << endl;
-    cout << student.getAge() << endl;
-    cout << student.getDaysToCompleteCourse(1) << endl;
-    cout << student.getDegreeProgram() << endl;
-
-    student.print();
-    */
-
-
-    
-    ////for student function test2 (parameterized constructor)
-    /*
-    Student* S = new Student("A1", "John", "Smith", "j@j.com", 20, 30, 35, 40, DegreeProgram::SECURITY);
-    S->print();
-    delete S;
-    */
-
-
-
     return 0;
-
 }

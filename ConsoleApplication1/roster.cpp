@@ -4,8 +4,11 @@
 
 using namespace std;
 
-// destructor
+// destructor (automatically invoked by statically created Roster class in main.cpp)
 Roster::~Roster() {
+	for (int i = 0; i < numStudents; i++) {
+		delete classRosterArray[i];
+	}
 }
 
 void Roster::add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram) {
